@@ -4,15 +4,15 @@
 
 ### Installing Dependencies
 
-#### Python 3.7
+### Python 3.7
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 
-#### Virtual Enviornment
+### Virtual Enviornment
 
 We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
-#### PIP Dependencies
+### PIP Dependencies
 
 Once you have your virtual environment setup and running, install dependencies by naviging to the `/backend` directory and running:
 
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 This will install all of the required packages we selected within the `requirements.txt` file.
 
-##### Key Dependencies
+#### Key Dependencies
 
 - [Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 
@@ -56,17 +56,17 @@ Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` d
 
 ## API Endpoints
 
-#### GET `/categories`
+### GET `/categories`
 
 List all categories available.
 
-- Example Request:
+#### Example Request
 
 ```
 curl localhost:5000/categories
 ```
 
-- Example Response:
+#### Example Response
 
 ```json
 {
@@ -79,11 +79,11 @@ curl localhost:5000/categories
 }
 ```
 
-#### GET `/questions`
+### GET `/questions`
 
 List questions with pagination (10 per page)
 
-- Example Request
+#### Example Request
 
 ```
 curl localhost:5000/questions
@@ -95,7 +95,7 @@ or
 curl localhost:5000/questions?page=1
 ```
 
-- Example Response:
+#### Example Response
 
 ```json
 {
@@ -185,17 +185,17 @@ curl localhost:5000/questions?page=1
 }
 ```
 
-#### DELETE `/questions/{question_id}`
+### DELETE `/questions/{question_id}`
 
 Delete the specified question based on the question id.
 
-- Example Request
+#### Example Request
 
 ```
 curl --location --request DELETE 'localhost:5000/questions/28'
 ```
 
-- Example Response
+#### Example Response
 
 ```json
 {
@@ -203,7 +203,7 @@ curl --location --request DELETE 'localhost:5000/questions/28'
 }
 ```
 
-#### POST `/questions`
+### POST `/questions`
 
 Add a new question
 
@@ -214,7 +214,7 @@ Parameters
 - category: string
 - difficulty: integer
 
-- Example Request
+#### Example Request
 
 ```
 curl --location --request POST 'localhost:5000/questions' \
@@ -227,7 +227,7 @@ curl --location --request POST 'localhost:5000/questions' \
 }'
 ```
 
-- Example Response
+#### Example Response
 
 ```
 {
@@ -236,7 +236,7 @@ curl --location --request POST 'localhost:5000/questions' \
 }
 ```
 
-#### POST `/questions/search`
+### POST `/questions/search`
 
 Search questions with user input keyword
 
@@ -244,7 +244,7 @@ Parameters
 
 - searchTerm: string
 
-- Example Request
+#### Example Request
 
 ```
 curl --location --request POST 'localhost:5000/questions/search' \
@@ -254,7 +254,7 @@ curl --location --request POST 'localhost:5000/questions/search' \
 }'
 ```
 
-- Example Response
+#### Example Response
 
 ```json
 {
@@ -271,11 +271,11 @@ curl --location --request POST 'localhost:5000/questions/search' \
 }
 ```
 
-#### GET /categories/{category_id}/questions
+### GET /categories/{category_id}/questions
 
 List questions by category id (10 per page)
 
-- Example Request
+#### Example Request
 
 ```
 curl localhost:5000/categories/6/questions
@@ -287,7 +287,7 @@ or
 curl localhost:5000/categories/6/questions?page=1
 ```
 
-- Example Response
+#### Example Response
 
 ```json
 {
@@ -313,11 +313,11 @@ curl localhost:5000/categories/6/questions?page=1
 }
 ```
 
-#### POST `/quizzes`
+### POST `/quizzes`
 
 Get a quiz question
 
-- Example Request
+#### Example Request
 
 ```
 curl --location --request POST 'localhost:5000/quizzes' \
@@ -333,7 +333,7 @@ curl --location --request POST 'localhost:5000/quizzes' \
 }'
 ```
 
-- Example Response
+#### Example Response
 
 ```json
 {
